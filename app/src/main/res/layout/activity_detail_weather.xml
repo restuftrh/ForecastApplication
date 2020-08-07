@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+           <TextView
+               android:id="@+id/city_name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="#4287f5"
+               android:text="Weather for DKI Jakarta, Indonesia"
+               android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Frid, 23 Feb 2020 10:00 WIB"
+                android:textColor="#818182"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:text="27`C"
+                    android:layout_marginTop="30dp"
+                    android:textSize="42sp" />
+
+                <ImageView
+                    android:id="@+id/cloudMain"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_cloudy" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text="Temp "
+                    android:layout_marginTop="24dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/temp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": 27'C |"
+                    android:layout_marginTop="24dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text=" Condition "
+                    android:layout_marginTop="24dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": Cloudy"
+                    android:layout_marginTop="24dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text="Lat "
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": 1.2312 |"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text=" Long "
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": -1.009809"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text="Sunrise "
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": 27'C |"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4287f5"
+                    android:text=" Sunset "
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#818182"
+                    android:text=": Cloudy"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_background_little"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cloudy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Friday, 23 Feb 2020"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tempAndCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="27'C - Rain"
+                        android:textSize="12sp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_background_little"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cloud2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cloudy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Friday, 23 Feb 2020"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tempAndCondition2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="27'C - Rain"
+                        android:textSize="12sp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_background_little"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cloud3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cloudy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateTime3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Friday, 23 Feb 2020"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tempAndCondition3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="27'C - Rain"
+                        android:textSize="12sp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_background_little"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/cloud4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cloudy" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dateTime4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="Friday, 23 Feb 2020"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tempAndCondition4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="27'C - Rain"
+                        android:textSize="12sp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>
